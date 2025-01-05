@@ -4,6 +4,8 @@
  */
 package vista;
 
+import javax.swing.SpinnerNumberModel;
+
 /**
  *
  * @author Dell Core i7
@@ -15,6 +17,12 @@ public class Spinner extends javax.swing.JFrame {
      */
     public Spinner() {
         initComponents();
+        SpinnerNumberModel limite = new SpinnerNumberModel(); // modelo del spinner
+        limite.setMaximum(10); // valor máximo del Spinner
+        limite.setMinimum(0);   // valor mínimo del Spinner
+        limite.setStepSize(2);  // saltos del Spinner
+        jspNumeros.setModel(limite); // asignar vlores al Spinner
+        
     }
 
     /**
