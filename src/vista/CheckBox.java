@@ -69,6 +69,7 @@ public class CheckBox extends javax.swing.JFrame {
         jcbQueso.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jcbQueso.setText("Queso");
 
+        btnPedido.setBackground(new java.awt.Color(204, 255, 204));
         btnPedido.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnPedido.setText("TOMAR PEDITO");
         btnPedido.addActionListener(new java.awt.event.ActionListener() {
@@ -100,13 +101,10 @@ public class CheckBox extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jcbCebolla, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(lblIngredientes, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(74, 74, 74)
-                                        .addComponent(btnPedido))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(30, 30, 30)
-                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(42, 42, 42)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(btnPedido)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jcbQueso, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -131,15 +129,11 @@ public class CheckBox extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblIngredientes)
                     .addComponent(btnPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jcbCebolla)
-                        .addGap(18, 18, 18))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jcbCebolla, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jcbCilantro)
@@ -148,7 +142,7 @@ public class CheckBox extends javax.swing.JFrame {
                         .addGap(15, 15, 15)
                         .addComponent(jcbQueso))
                     .addComponent(jScrollPane1))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         pack();
@@ -161,18 +155,19 @@ public class CheckBox extends javax.swing.JFrame {
     private void btnPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPedidoActionPerformed
         // TODO add your handling code here:
         String orden = "";
-        if (jcbCebolla.isShowing()){
-            orden = orden + "con Cebolla\n";
+        if (jcbCebolla.isSelected()){
+            orden = orden + "Cebolla, ";
         }
-        if (jcbCilantro.isShowing()){
-            orden = orden + "con Cilantro\n";
+        if (jcbCilantro.isSelected()){
+            orden = orden + "Cilantro, ";
         }
-        if (jcbPiña.isShowing()){
-            orden = orden + "con Piña\n";
+        if (jcbPiña.isSelected()){
+            orden = orden + "Piña, ";
         }
-        if (jcbQueso.isShowing()){
-            orden = orden + "con Queso\n";
+        if (jcbQueso.isSelected()){
+            orden = orden + "Queso, ";
         }
+        txtAResumenOrden.setText(orden);
     }//GEN-LAST:event_btnPedidoActionPerformed
 
     /**
