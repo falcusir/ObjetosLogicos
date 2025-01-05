@@ -26,21 +26,154 @@ public class CheckBox extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblTitulo = new javax.swing.JLabel();
+        lblSubtitulo = new javax.swing.JLabel();
+        lblIngredientes = new javax.swing.JLabel();
+        jcbCebolla = new javax.swing.JCheckBox();
+        jcbCilantro = new javax.swing.JCheckBox();
+        jcbPiña = new javax.swing.JCheckBox();
+        jcbQueso = new javax.swing.JCheckBox();
+        btnPedido = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtAResumenOrden = new javax.swing.JTextArea();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        lblTitulo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        lblTitulo.setForeground(new java.awt.Color(0, 0, 102));
+        lblTitulo.setText("Check Box");
+
+        lblSubtitulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblSubtitulo.setForeground(new java.awt.Color(153, 51, 0));
+        lblSubtitulo.setText("\"¿'Qué le ponemos a tus Taquitos?\"");
+
+        lblIngredientes.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblIngredientes.setForeground(new java.awt.Color(0, 0, 102));
+        lblIngredientes.setText("Ingredietes:");
+
+        jcbCebolla.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jcbCebolla.setText("Cebolla");
+        jcbCebolla.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbCebollaActionPerformed(evt);
+            }
+        });
+
+        jcbCilantro.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jcbCilantro.setText("Cilantro");
+
+        jcbPiña.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jcbPiña.setText("Piña");
+
+        jcbQueso.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jcbQueso.setText("Queso");
+
+        btnPedido.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnPedido.setText("TOMAR PEDITO");
+        btnPedido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPedidoActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel1.setText("Sus taquitos van con:");
+
+        txtAResumenOrden.setColumns(20);
+        txtAResumenOrden.setRows(5);
+        jScrollPane1.setViewportView(txtAResumenOrden);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(105, 105, 105)
+                        .addComponent(lblTitulo))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jcbCebolla, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblIngredientes, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(74, 74, 74)
+                                        .addComponent(btnPedido))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(30, 30, 30)
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jcbQueso, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jcbPiña, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jcbCilantro, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(51, 51, 51)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(lblSubtitulo)
+                .addGap(41, 41, 41))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblTitulo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblSubtitulo)
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblIngredientes)
+                    .addComponent(btnPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jcbCebolla)
+                        .addGap(18, 18, 18))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jcbCilantro)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jcbPiña)
+                        .addGap(15, 15, 15)
+                        .addComponent(jcbQueso))
+                    .addComponent(jScrollPane1))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jcbCebollaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbCebollaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcbCebollaActionPerformed
+
+    private void btnPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPedidoActionPerformed
+        // TODO add your handling code here:
+        String orden = "";
+        if (jcbCebolla.isShowing()){
+            orden = orden + "con Cebolla\n";
+        }
+        if (jcbCilantro.isShowing()){
+            orden = orden + "con Cilantro\n";
+        }
+        if (jcbPiña.isShowing()){
+            orden = orden + "con Piña\n";
+        }
+        if (jcbQueso.isShowing()){
+            orden = orden + "con Queso\n";
+        }
+    }//GEN-LAST:event_btnPedidoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +211,16 @@ public class CheckBox extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnPedido;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JCheckBox jcbCebolla;
+    private javax.swing.JCheckBox jcbCilantro;
+    private javax.swing.JCheckBox jcbPiña;
+    private javax.swing.JCheckBox jcbQueso;
+    private javax.swing.JLabel lblIngredientes;
+    private javax.swing.JLabel lblSubtitulo;
+    private javax.swing.JLabel lblTitulo;
+    private javax.swing.JTextArea txtAResumenOrden;
     // End of variables declaration//GEN-END:variables
 }
